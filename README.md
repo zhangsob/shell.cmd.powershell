@@ -34,7 +34,7 @@ Linux Shell, Windows Command, PowerShell 비교
 | tar xvf newdir.tar              | tar xvf newdir.tar                     | tar xvf newdir.tar                            | tar화일 풀기                            |
 | gzip newdir.tar                 | tar cvfz newdir.tar.gz newdir          | tar cvfz newdir.tar.gz newdir                 | 화일 압축하기(.gz)                      |
 | gunzip newdir.tar.gz            | tar xvf newdir.tar.gz                  | tar xvf newdir.tar.gz                         | 압축화일 풀기                           |
-| wget http://www.abc.com/abc.zip |                                        | Start-BitsTransfer http://www.abc.com/abc.zip | 원격화일 가져오기                       |
+| wget http://www.abc.com/abc.zip | curl http://www.abc.com/abc.zip        | Start-BitsTransfer http://www.abc.com/abc.zip | 원격화일 가져오기                       |
 
 참고> backup하기 [./backup.bat.md](./backup.bat.md)
 
