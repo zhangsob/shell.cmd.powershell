@@ -29,12 +29,14 @@ Linux Shell, Windows Command, PowerShell 비교
 |                                 | attrib +H .*                           |                                               | .으로 시작하는 화일을 숨김 화일로       |
 | touch empty.txt                 | copy con empty.txt 후 &lt;Ctrl&gt;+'Z' |                                               | 0 크기 화일 만들기                      |
 | touch empty.txt                 |                                        |                                               | empty.txt가 있으면 화일일자 갱신        |
-| tar cvf newdir.tar newdir       |                                        | tar cvf newdir.tar newdir                     | 화일 묶기 (tape archive)                |
-| tar tvf newdir.tar              |                                        | tar tvf newdir.tar                            | tar화일 내역 보기                       |
-| tar xvf newdir.tar              |                                        | tar xvf newdir.tar                            | tar화일 풀기                            |
-| gzip newdir.tar                 |                                        |                                               | 화일 압축하기(.gz)                      |
-| gunzip newdir.tar.gz            |                                        |                                               | 압축화일 풀기                           |
+| tar cvf newdir.tar newdir       | tar cvf newdir.tar newdir              | tar cvf newdir.tar newdir                     | 화일 묶기 (tape archive)                |
+| tar tvf newdir.tar              | tar tvf newdir.tar                     | tar tvf newdir.tar                            | tar화일 내역 보기                       |
+| tar xvf newdir.tar              | tar xvf newdir.tar                     | tar xvf newdir.tar                            | tar화일 풀기                            |
+| gzip newdir.tar                 | tar cvfz newdir.tar.gz newdir          | tar cvfz newdir.tar.gz newdir                 | 화일 압축하기(.gz)                      |
+| gunzip newdir.tar.gz            | tar xvf newdir.tar.gz                  | tar xvf newdir.tar.gz                         | 압축화일 풀기                           |
 | wget http://www.abc.com/abc.zip |                                        | Start-BitsTransfer http://www.abc.com/abc.zip | 원격화일 가져오기                       |
+
+참고> backup하기 [./backup.bat.md](./backup.bat.md)
 
 ## 네트워크 관련 명령어
 
