@@ -77,7 +77,7 @@
   
   YYYYMMDD=`date +%Y%m%d`
   DIR_NAME=${PWD##*/}
-  ZIP_NAME=${DIR_NAME}.${YYYYMMDD%}.zip
+  ZIP_NAME=${DIR_NAME}.${YYYYMMDD}.zip
   
   cd ..
   
