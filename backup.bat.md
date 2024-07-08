@@ -11,7 +11,8 @@
 
   set YYYYMMDD=%YYYYMMDDHHMMSS:~0,8%
   set HHMM=%YYYYMMDDHHMMSS:~8,4%
-  set ZIP_NAME=..\source.%YYYYMMDD%.%HHMM%.tar.gz
+  for %%I in (.) do set CurrDirName=%%~nxI
+  set ZIP_NAME=..\%CurrDirName%.%YYYYMMDD%.%HHMM%.tar.gz
 
   tar cvfz %ZIP_NAME% *.h *.c *.cpp ^
   *.dsw ^
@@ -28,7 +29,8 @@
   
   YYYYMMDD=`date +%Y%m%d`
   HHMM=`date +%H%M`
-  ZIP_NAME=../source.%YYYYMMDD%.%HHMM%.tar.gz
+  CurrDirName=${PWD##*/}
+  ZIP_NAME=../${CurrDirName}.${YYYYMMDD}.${HHMM}.tar.gz
   
   tar cvfz ${ZIP_NAME} *.h *.c *.cpp \
   *.dsw \
@@ -50,7 +52,7 @@
   `) do set "YYYYMMDDHHMMSS=%%a"
 
   set YYYYMMDD=%YYYYMMDDHHMMSS:~0,8%
-  set DIR_NAME=soruce
+  for %%I in (.) do set DIR_NAME=%%~nxI
   set ZIP_NAME=%DIR_NAME%.%YYYYMMDD%.zip
 
   cd ..
@@ -73,8 +75,8 @@
   ```shell
   #!/bin/sh
   
-  YYYYMMDD=`date +%Y.%m.%d`
-  DIR_NAME=source
+  YYYYMMDD=`date +%Y%m%d`
+  DIR_NAME=${PWD##*/}
   ZIP_NAME=${DIR_NAME}.${YYYYMMDD%}.zip
   
   cd ..
