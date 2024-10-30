@@ -1,4 +1,4 @@
-# shell.cmd.powershell
+﻿# shell.cmd.powershell
 Linux Shell, Windows Command, PowerShell 비교  
 
 ## File과 Directory관련 명령어
@@ -85,3 +85,9 @@ Linux Shell, Windows Command, PowerShell 비교
 | echo $PATH                     | echo %PATH%                            | echo $env:path                | 문자열 출력하기                         |
 | cal                            |                                        |                               | 달력보기                                |
 |                                | calc                                   |                               | 계산기 열기                             |
+
+## powershell
+  - 수정일자가 "2024-10-03" 이후의 ncr*.jpg화일만 얻기
+  ```powershell
+  Get-Item ncr*.jpg | where-object { $_.LastWriteTime -ge "2024-10-03" }
+  ```

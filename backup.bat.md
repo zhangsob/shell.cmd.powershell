@@ -1,4 +1,4 @@
-# Backup화일 만들기
+﻿# Backup화일 만들기
 ## tar.gz화일 [ Windows 10과 Linux(Unix) 공통용]
 
 - backup.bat
