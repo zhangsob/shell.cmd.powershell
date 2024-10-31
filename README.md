@@ -87,7 +87,7 @@ Linux Shell, Windows Command, PowerShell 비교
 |                                | calc                                   |                               | 계산기 열기                             |
 
 ## powershell
-  - 수정일자가 "2024-10-03" 이후의 ncr*.jpg화일만 얻기
+  - 수정일자가 "2024-10-03" 이후의 ncr*.jpg화일을 D:\tmp에 복사하기
   ```powershell
-  Get-Item ncr*.jpg | where-object { $_.LastWriteTime -ge "2024-10-03" }
+  Get-Item ncr*.jpg | where-object { $_.LastWriteTime -ge "2024-10-03" } | Copy-Item -D D:\tmp
   ```
